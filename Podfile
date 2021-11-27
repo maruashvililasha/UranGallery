@@ -7,5 +7,5 @@ target 'UranGallery' do
 
   # Pods for UranGallery
   pod 'ProgressHUD'
-
+  pod 'Kingfisher', '~> 7.0'
 end

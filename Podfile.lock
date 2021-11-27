@@ -1,16 +1,20 @@
 PODS:
+  - Kingfisher (7.1.1)
   - ProgressHUD (13.6)
 
 DEPENDENCIES:
+  - Kingfisher (~> 7.0)
   - ProgressHUD
 
 SPEC REPOS:
   trunk:
+    - Kingfisher
     - ProgressHUD
 
 SPEC CHECKSUMS:
+  Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
 
-PODFILE CHECKSUM: c60f2155d202c1140008905a9f32d774dbd8b08d
+PODFILE CHECKSUM: 7f1dc17814f42797fdfb3cb8fabdcdec80b5e333
 
 COCOAPODS: 1.11.2
