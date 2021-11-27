@@ -9,21 +9,63 @@
 /* Begin PBXBuildFile section */
 		4C1DD5BD2750289600BBB86D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DD5BC2750289600BBB86D /* AppDelegate.swift */; };
 		4C1DD5BF2750289600BBB86D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DD5BE2750289600BBB86D /* SceneDelegate.swift */; };
-		4C1DD5C12750289600BBB86D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DD5C02750289600BBB86D /* ViewController.swift */; };
+		4C1DD5C12750289600BBB86D /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DD5C02750289600BBB86D /* GalleryViewController.swift */; };
 		4C1DD5C42750289600BBB86D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1DD5C22750289600BBB86D /* Main.storyboard */; };
 		4C1DD5C62750289700BBB86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1DD5C52750289700BBB86D /* Assets.xcassets */; };
 		4C1DD5C92750289700BBB86D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1DD5C72750289700BBB86D /* LaunchScreen.storyboard */; };
+		4CD10C882751585000C64D26 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD10C872751585000C64D26 /* GalleryViewModel.swift */; };
+		4CD10C8A27515B3B00C64D26 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD10C8927515B3B00C64D26 /* ImageCollectionViewCell.swift */; };
+		4CE6F73E275037E6006817C6 /* UranNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE6F73A275037CE006817C6 /* UranNetworking.framework */; };
+		4CE6F73F275037E6006817C6 /* UranNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE6F73A275037CE006817C6 /* UranNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4CE9F18C438ABEAF626DDE12 /* Pods_UranGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249AFBD1BF9C119D06144405 /* Pods_UranGallery.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4CE6F739275037CE006817C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CE6F734275037CE006817C6 /* UranNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CE6F6EB27503659006817C6;
+			remoteInfo = UranNetworking;
+		};
+		4CE6F73B275037CE006817C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CE6F734275037CE006817C6 /* UranNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CE6F6F527503659006817C6;
+			remoteInfo = UranNetworkingTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4CE6F740275037E6006817C6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4CE6F73F275037E6006817C6 /* UranNetworking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		249AFBD1BF9C119D06144405 /* Pods_UranGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UranGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1DD5B92750289600BBB86D /* UranGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UranGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1DD5BC2750289600BBB86D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C1DD5BE2750289600BBB86D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4C1DD5C02750289600BBB86D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C1DD5C02750289600BBB86D /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		4C1DD5C32750289600BBB86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C1DD5C52750289700BBB86D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C1DD5C82750289700BBB86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C1DD5CA2750289700BBB86D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CD10C872751585000C64D26 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		4CD10C8927515B3B00C64D26 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		4CE6F734275037CE006817C6 /* UranNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UranNetworking.xcodeproj; path = ../UranNetworking/UranNetworking.xcodeproj; sourceTree = "<group>"; };
+		8F19E04BADBFA2A434E6F200 /* Pods-UranGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UranGallery.release.xcconfig"; path = "Target Support Files/Pods-UranGallery/Pods-UranGallery.release.xcconfig"; sourceTree = "<group>"; };
+		B2F1E317CE056291E414E83E /* Pods-UranGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UranGallery.debug.xcconfig"; path = "Target Support Files/Pods-UranGallery/Pods-UranGallery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +73,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CE6F73E275037E6006817C6 /* UranNetworking.framework in Frameworks */,
+				4CE9F18C438ABEAF626DDE12 /* Pods_UranGallery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BDE1094B6FCEE153EEE123E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2F1E317CE056291E414E83E /* Pods-UranGallery.debug.xcconfig */,
+				8F19E04BADBFA2A434E6F200 /* Pods-UranGallery.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4C1DD5B02750289600BBB86D = {
 			isa = PBXGroup;
 			children = (
 				4C1DD5BB2750289600BBB86D /* UranGallery */,
+				4CE6F734275037CE006817C6 /* UranNetworking.xcodeproj */,
 				4C1DD5BA2750289600BBB86D /* Products */,
+				2BDE1094B6FCEE153EEE123E /* Pods */,
+				6D5DB87549B2A6EBB083E46B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +112,66 @@
 		4C1DD5BB2750289600BBB86D /* UranGallery */ = {
 			isa = PBXGroup;
 			children = (
+				4CD10C812751581E00C64D26 /* Gallery */,
 				4C1DD5BC2750289600BBB86D /* AppDelegate.swift */,
 				4C1DD5BE2750289600BBB86D /* SceneDelegate.swift */,
-				4C1DD5C02750289600BBB86D /* ViewController.swift */,
-				4C1DD5C22750289600BBB86D /* Main.storyboard */,
 				4C1DD5C52750289700BBB86D /* Assets.xcassets */,
 				4C1DD5C72750289700BBB86D /* LaunchScreen.storyboard */,
 				4C1DD5CA2750289700BBB86D /* Info.plist */,
 			);
 			path = UranGallery;
+			sourceTree = "<group>";
+		};
+		4CD10C812751581E00C64D26 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				4CD10C842751582500C64D26 /* View */,
+				4CD10C852751582B00C64D26 /* ViewModel */,
+				4CD10C862751583300C64D26 /* ViewController */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		4CD10C842751582500C64D26 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4CD10C8927515B3B00C64D26 /* ImageCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4CD10C852751582B00C64D26 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4CD10C872751585000C64D26 /* GalleryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4CD10C862751583300C64D26 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4C1DD5C02750289600BBB86D /* GalleryViewController.swift */,
+				4C1DD5C22750289600BBB86D /* Main.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4CE6F735275037CE006817C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CE6F73A275037CE006817C6 /* UranNetworking.framework */,
+				4CE6F73C275037CE006817C6 /* UranNetworkingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D5DB87549B2A6EBB083E46B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				249AFBD1BF9C119D06144405 /* Pods_UranGallery.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C1DD5CD2750289700BBB86D /* Build configuration list for PBXNativeTarget "UranGallery" */;
 			buildPhases = (
+				B8FBBD5B035DD0DAD9954A8E /* [CP] Check Pods Manifest.lock */,
 				4C1DD5B52750289600BBB86D /* Sources */,
 				4C1DD5B62750289600BBB86D /* Frameworks */,
 				4C1DD5B72750289600BBB86D /* Resources */,
+				4CE6F740275037E6006817C6 /* Embed Frameworks */,
+				FE73D6BBE6584F5836384BF6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -113,12 +223,35 @@
 			mainGroup = 4C1DD5B02750289600BBB86D;
 			productRefGroup = 4C1DD5BA2750289600BBB86D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4CE6F735275037CE006817C6 /* Products */;
+					ProjectRef = 4CE6F734275037CE006817C6 /* UranNetworking.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4C1DD5B82750289600BBB86D /* UranGallery */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4CE6F73A275037CE006817C6 /* UranNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UranNetworking.framework;
+			remoteRef = 4CE6F739275037CE006817C6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4CE6F73C275037CE006817C6 /* UranNetworkingTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UranNetworkingTests.xctest;
+			remoteRef = 4CE6F73B275037CE006817C6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4C1DD5B72750289600BBB86D /* Resources */ = {
@@ -133,12 +266,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B8FBBD5B035DD0DAD9954A8E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UranGallery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE73D6BBE6584F5836384BF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UranGallery/Pods-UranGallery-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UranGallery/Pods-UranGallery-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UranGallery/Pods-UranGallery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4C1DD5B52750289600BBB86D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C1DD5C12750289600BBB86D /* ViewController.swift in Sources */,
+				4C1DD5C12750289600BBB86D /* GalleryViewController.swift in Sources */,
+				4CD10C8A27515B3B00C64D26 /* ImageCollectionViewCell.swift in Sources */,
+				4CD10C882751585000C64D26 /* GalleryViewModel.swift in Sources */,
 				4C1DD5BD2750289600BBB86D /* AppDelegate.swift in Sources */,
 				4C1DD5BF2750289600BBB86D /* SceneDelegate.swift in Sources */,
 			);
@@ -284,9 +461,11 @@
 		};
 		4C1DD5CE2750289700BBB86D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2F1E317CE056291E414E83E /* Pods-UranGallery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6H4TY4MP42;
@@ -312,9 +491,11 @@
 		};
 		4C1DD5CF2750289700BBB86D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F19E04BADBFA2A434E6F200 /* Pods-UranGallery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6H4TY4MP42;
