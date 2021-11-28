@@ -12,7 +12,10 @@ import Kingfisher
 
 class GalleryViewController: UIViewController {
     
-    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var pagingView: UIView!
+    @IBOutlet weak var previousPageButton: UIButton!
+    @IBOutlet weak var nextPageButton: UIButton!
+    @IBOutlet weak var currentPageLabel: UILabel!
     @IBOutlet weak var trashbinButton: UIButton!
     @IBOutlet weak var galleryCollectionView: UICollectionView!
     
@@ -31,7 +34,19 @@ class GalleryViewController: UIViewController {
     
     var images : [UGImage] = [] {
         didSet {
-            galleryCollectionView.reloadData()
+            DispatchQueue.main.async { [unowned self] in
+                galleryCollectionView.reloadData()
+            }
+        }
+    }
+    
+    var currentPage = 1 {
+        didSet {
+            ProgressHUD.show()
+            viewModel.getIamges(page: currentPage)
+            currentPageLabel.text  = "\(currentPage)"
+            previousPageButton.isEnabled = currentPage != 1
+            nextPageButton.isEnabled = currentPage != 10
         }
     }
     
@@ -39,6 +54,7 @@ class GalleryViewController: UIViewController {
         super.viewDidLoad()
         viewModel = GalleryViewModel()
         setupUI()
+        bind()
         getGalleryData()
     }
     
@@ -57,36 +73,43 @@ class GalleryViewController: UIViewController {
         galleryCollectionView.dataSource = self
         galleryCollectionView.delegate = self
         // Buttons
-        pageControl.isHidden = false
+        pagingView.isHidden = false
         trashbinButton.isHidden = true
+        currentPage = 1
     }
     
-    private func toggleSearchMode() {
-        galleryCollectionView.allowsMultipleSelection = searchMode
-        galleryCollectionView.reloadData()
-        if searchMode {
-//            pageLabel.text = "\(currentSearchPage)"
-        } else {
-//            pageLabel.text = "\(currentPage)"
-        }
-    }
-    
-    private func toggleSelectionMode() {
-        pageControl.isHidden = isSelectionMode
-        trashbinButton.isHidden = !isSelectionMode
-    }
-    
-    private func getGalleryData() {
-        ProgressHUD.show()
-        viewModel.getIamges(page: 1) { [weak self] images in
+    private func bind() {
+        viewModel.imagesPublisher.bind { [weak self] images in
             ProgressHUD.dismiss()
             self?.images = images
-        } errorHandler: { error in
+        }
+        viewModel.errorPublisher.bind { error in
+            guard let error = error else {return}
             guard error.errorType == .toBeShown else {
                 print(error)
                 return
             }
             ProgressHUD.showError(error.errorMessage)
+        }
+    }
+    
+    private func getGalleryData() {
+        ProgressHUD.show()
+        viewModel.getIamges(page: 1)
+    }
+    
+    private func toggleSearchMode() {
+        galleryCollectionView.allowsMultipleSelection = searchMode
+        galleryCollectionView.reloadData()
+        pagingView.isHidden = searchMode
+        if !searchMode {
+            viewModel.getIamges(page: currentPage)
+        }
+    }
+    
+    private func toggleSelectionMode() {
+        DispatchQueue.main.async { [unowned self] in
+            trashbinButton.isHidden = !isSelectionMode
         }
     }
     
@@ -120,6 +143,14 @@ class GalleryViewController: UIViewController {
         }
     }
     
+    @IBAction func previousButtonDidTap(_ sender: UIButton) {
+        currentPage -= 1
+    }
+    
+    @IBAction func nextButtonDidTap(_ sender: UIButton) {
+        currentPage += 1
+    }
+    
     @IBAction func trashbinButtonDidTap(_ sender: UIButton) {
         guard let selectedIndexes = galleryCollectionView.indexPathsForSelectedItems else {return}
         for index in selectedIndexes {
@@ -138,8 +169,8 @@ extension GalleryViewController : UISearchResultsUpdating {
         }
         searchMode = true
         print(searchText)
-        
-        galleryCollectionView.reloadData()
+        ProgressHUD.show()
+        viewModel.searchForIamges(page: 1, query: searchText)
     }
 }
 

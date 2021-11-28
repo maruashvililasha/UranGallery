@@ -82,68 +82,103 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tlw-FI-sMw">
-                                <rect key="frame" x="38.5" y="772" width="337.5" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5H2-7A-kuC">
+                                <rect key="frame" x="74" y="782" width="266" height="60"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5H2-7A-kuC">
-                                        <rect key="frame" x="20" y="10" width="297.5" height="40"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YG4-M0-3zy">
+                                        <rect key="frame" x="0.0" y="0.0" width="191" height="60"/>
                                         <subviews>
-                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="rr2-c0-QLg">
-                                                <rect key="frame" x="0.0" y="0.0" width="242.5" height="40"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="currentPageIndicatorTintColor" systemColor="systemBlueColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </pageControl>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjy-xX-5wP">
-                                                <rect key="frame" x="257.5" y="1.5" width="40" height="37.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="6JW-Xh-4Dd"/>
-                                                    <constraint firstAttribute="width" constant="40" id="Rtw-9v-UsS"/>
-                                                </constraints>
-                                                <color key="tintColor" systemColor="systemPinkColor"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" backgroundImage="trash.square" catalog="system"/>
-                                                <connections>
-                                                    <action selector="trashbinButtonDidTap:" destination="Zug-v8-BWm" eventType="touchUpInside" id="ffP-GP-fQE"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Zd4-Vs-TQu" userLabel="PagingStack">
+                                                <rect key="frame" x="20" y="10" width="151" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mZ-TA-7ln">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="0Eb-hk-eKU"/>
+                                                        </constraints>
+                                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="chevron.left" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="previousButtonDidTap:" destination="Zug-v8-BWm" eventType="touchUpInside" id="8xJ-pF-A5E"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWK-Ia-yTK">
+                                                        <rect key="frame" x="70" y="0.0" width="11" height="40"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                        <color key="textColor" systemColor="systemIndigoColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLJ-SW-J5M">
+                                                        <rect key="frame" x="121" y="0.0" width="30" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="vci-j6-b7n"/>
+                                                        </constraints>
+                                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="chevron.right" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="nextButtonDidTap:" destination="Zug-v8-BWm" eventType="touchUpInside" id="GMC-FB-ew4"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Zd4-Vs-TQu" firstAttribute="top" secondItem="YG4-M0-3zy" secondAttribute="top" constant="10" id="873-Gc-hQK"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zd4-Vs-TQu" secondAttribute="bottom" constant="10" id="A6b-Tp-P0P"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zd4-Vs-TQu" secondAttribute="trailing" constant="20" id="gIr-xz-1ts"/>
+                                            <constraint firstItem="Zd4-Vs-TQu" firstAttribute="leading" secondItem="YG4-M0-3zy" secondAttribute="leading" constant="20" id="oia-Yd-jM6"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjy-xX-5wP">
+                                        <rect key="frame" x="206" y="0.0" width="60" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="6JW-Xh-4Dd"/>
+                                            <constraint firstAttribute="width" constant="60" id="Rtw-9v-UsS"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="trash.square" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="trashbinButtonDidTap:" destination="Zug-v8-BWm" eventType="touchUpInside" id="ffP-GP-fQE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="5H2-7A-kuC" secondAttribute="trailing" constant="20" id="2Nq-NC-cly"/>
-                                    <constraint firstItem="5H2-7A-kuC" firstAttribute="top" secondItem="Tlw-FI-sMw" secondAttribute="top" constant="10" id="6jm-wu-SjJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="5H2-7A-kuC" secondAttribute="bottom" constant="10" id="Ie7-Mk-dHX"/>
-                                    <constraint firstItem="5H2-7A-kuC" firstAttribute="leading" secondItem="Tlw-FI-sMw" secondAttribute="leading" constant="20" id="eV0-h2-PAN"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eim-1A-dsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="eim-1A-dsI" firstAttribute="bottom" secondItem="5H2-7A-kuC" secondAttribute="bottom" constant="20" id="1wM-Dk-oG2"/>
                             <constraint firstItem="Vav-5D-0VH" firstAttribute="leading" secondItem="eim-1A-dsI" secondAttribute="leading" id="PBf-EU-LhB"/>
-                            <constraint firstItem="eim-1A-dsI" firstAttribute="bottom" secondItem="Tlw-FI-sMw" secondAttribute="bottom" constant="30" id="WFK-7n-Soy"/>
                             <constraint firstItem="eim-1A-dsI" firstAttribute="trailing" secondItem="Vav-5D-0VH" secondAttribute="trailing" id="giO-XZ-GN9"/>
-                            <constraint firstItem="Tlw-FI-sMw" firstAttribute="centerX" secondItem="3bb-CW-Jm4" secondAttribute="centerX" id="maM-zh-vQY"/>
+                            <constraint firstItem="5H2-7A-kuC" firstAttribute="centerX" secondItem="3bb-CW-Jm4" secondAttribute="centerX" id="jKd-wT-rmP"/>
                             <constraint firstItem="Vav-5D-0VH" firstAttribute="top" secondItem="eim-1A-dsI" secondAttribute="top" id="y17-UN-uFl"/>
                             <constraint firstAttribute="bottom" secondItem="Vav-5D-0VH" secondAttribute="bottom" id="z08-B1-WYP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kSk-hb-y02"/>
                     <connections>
+                        <outlet property="currentPageLabel" destination="UWK-Ia-yTK" id="Yq1-jx-JFd"/>
                         <outlet property="galleryCollectionView" destination="Vav-5D-0VH" id="Pbm-rm-7oF"/>
-                        <outlet property="pageControl" destination="rr2-c0-QLg" id="6hi-xe-4cw"/>
+                        <outlet property="nextPageButton" destination="aLJ-SW-J5M" id="SsX-xK-HS9"/>
+                        <outlet property="pagingView" destination="YG4-M0-3zy" id="Pzs-XN-NnP"/>
+                        <outlet property="previousPageButton" destination="5mZ-TA-7ln" id="oMD-qW-FfG"/>
                         <outlet property="trashbinButton" destination="vjy-xX-5wP" id="DUs-ET-vDK"/>
                     </connections>
                 </viewController>
@@ -154,6 +189,8 @@
     </scenes>
     <resources>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="trash.square" catalog="system" width="128" height="114"/>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -161,8 +198,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -19,6 +19,7 @@
 		4CE6F73E275037E6006817C6 /* UranNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE6F73A275037CE006817C6 /* UranNetworking.framework */; };
 		4CE6F73F275037E6006817C6 /* UranNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE6F73A275037CE006817C6 /* UranNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4CE9F18C438ABEAF626DDE12 /* Pods_UranGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249AFBD1BF9C119D06144405 /* Pods_UranGallery.framework */; };
+		4CFAFFD12752F3820044472C /* UGPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAFFD02752F3820044472C /* UGPublisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		4CD10C872751585000C64D26 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		4CD10C8927515B3B00C64D26 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		4CE6F734275037CE006817C6 /* UranNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UranNetworking.xcodeproj; path = ../UranNetworking/UranNetworking.xcodeproj; sourceTree = "<group>"; };
+		4CFAFFD02752F3820044472C /* UGPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGPublisher.swift; sourceTree = "<group>"; };
 		8F19E04BADBFA2A434E6F200 /* Pods-UranGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UranGallery.release.xcconfig"; path = "Target Support Files/Pods-UranGallery/Pods-UranGallery.release.xcconfig"; sourceTree = "<group>"; };
 		B2F1E317CE056291E414E83E /* Pods-UranGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UranGallery.debug.xcconfig"; path = "Target Support Files/Pods-UranGallery/Pods-UranGallery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,9 +116,10 @@
 		4C1DD5BB2750289600BBB86D /* UranGallery */ = {
 			isa = PBXGroup;
 			children = (
-				4C65E6A12751EE9000A77983 /* Extensions */,
 				4C65E69E2751EE6600A77983 /* App */,
 				4CD10C812751581E00C64D26 /* Gallery */,
+				4C65E6A12751EE9000A77983 /* Extensions */,
+				4CFAFFCD2752F36B0044472C /* Helpers */,
 				4C1DD5C52750289700BBB86D /* Assets.xcassets */,
 				4C1DD5CA2750289700BBB86D /* Info.plist */,
 			);
@@ -183,6 +186,14 @@
 				4CE6F73C275037CE006817C6 /* UranNetworkingTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4CFAFFCD2752F36B0044472C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4CFAFFD02752F3820044472C /* UGPublisher.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		6D5DB87549B2A6EBB083E46B /* Frameworks */ = {
@@ -333,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C65E6A32751EEAF00A77983 /* UIView+Extensions.swift in Sources */,
+				4CFAFFD12752F3820044472C /* UGPublisher.swift in Sources */,
 				4C1DD5C12750289600BBB86D /* GalleryViewController.swift in Sources */,
 				4CD10C8A27515B3B00C64D26 /* ImageCollectionViewCell.swift in Sources */,
 				4CD10C882751585000C64D26 /* GalleryViewModel.swift in Sources */,

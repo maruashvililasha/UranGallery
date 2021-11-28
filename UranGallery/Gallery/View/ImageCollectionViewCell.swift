@@ -26,7 +26,8 @@ class ImageCollectionViewCell: UICollectionViewCell {
             imageURL = URL(string: image.urls.thumb)
             checkMarkImageView.alpha = 0
         }
-        self.imageView.kf.setImage(with: imageURL)
+        let placeHolder = UIImage(named: "placeholder")
+        self.imageView.kf.setImage(with: imageURL, placeholder: placeHolder)
     }
     
     override var isSelected: Bool {
