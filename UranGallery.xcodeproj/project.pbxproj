@@ -13,9 +13,9 @@
 		4C1DD5C42750289600BBB86D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1DD5C22750289600BBB86D /* Main.storyboard */; };
 		4C1DD5C62750289700BBB86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1DD5C52750289700BBB86D /* Assets.xcassets */; };
 		4C1DD5C92750289700BBB86D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1DD5C72750289700BBB86D /* LaunchScreen.storyboard */; };
+		4C464912275308BD00CEA077 /* UranNetworking.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C464911275308BD00CEA077 /* UranNetworking.xcframework */; };
+		4C464913275308BD00CEA077 /* UranNetworking.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C464911275308BD00CEA077 /* UranNetworking.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4C65E6A32751EEAF00A77983 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65E6A22751EEAF00A77983 /* UIView+Extensions.swift */; };
-		4CB02B4A275306420011BD36 /* UranNetworking.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB02B49275306420011BD36 /* UranNetworking.xcframework */; };
-		4CB02B4B275306420011BD36 /* UranNetworking.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB02B49275306420011BD36 /* UranNetworking.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4CD10C882751585000C64D26 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD10C872751585000C64D26 /* GalleryViewModel.swift */; };
 		4CD10C8A27515B3B00C64D26 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD10C8927515B3B00C64D26 /* ImageCollectionViewCell.swift */; };
 		4CE9F18C438ABEAF626DDE12 /* Pods_UranGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249AFBD1BF9C119D06144405 /* Pods_UranGallery.framework */; };
@@ -23,13 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4CB02B48275305700011BD36 /* Embed Frameworks */ = {
+		4C4649102753087E00CEA077 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4CB02B4B275306420011BD36 /* UranNetworking.xcframework in Embed Frameworks */,
+				4C464913275308BD00CEA077 /* UranNetworking.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,9 +46,8 @@
 		4C1DD5C52750289700BBB86D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C1DD5C82750289700BBB86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C1DD5CA2750289700BBB86D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C464911275308BD00CEA077 /* UranNetworking.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UranNetworking.xcframework; path = NetworkFramework/UranNetworking.xcframework; sourceTree = "<group>"; };
 		4C65E6A22751EEAF00A77983 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		4CB02B452753055B0011BD36 /* UranNetworking.framework-iphoneos.xcarchive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "UranNetworking.framework-iphoneos.xcarchive"; path = "../UranNetworking/build/UranNetworking.framework-iphoneos.xcarchive"; sourceTree = "<group>"; };
-		4CB02B49275306420011BD36 /* UranNetworking.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UranNetworking.xcframework; path = ../UranNetworking/build/UranNetworking.xcframework; sourceTree = "<group>"; };
 		4CD10C872751585000C64D26 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		4CD10C8927515B3B00C64D26 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		4CFAFFD02752F3820044472C /* UGPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGPublisher.swift; sourceTree = "<group>"; };
@@ -62,7 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CE9F18C438ABEAF626DDE12 /* Pods_UranGallery.framework in Frameworks */,
-				4CB02B4A275306420011BD36 /* UranNetworking.xcframework in Frameworks */,
+				4C464912275308BD00CEA077 /* UranNetworking.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,8 +172,7 @@
 		6D5DB87549B2A6EBB083E46B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4CB02B49275306420011BD36 /* UranNetworking.xcframework */,
-				4CB02B452753055B0011BD36 /* UranNetworking.framework-iphoneos.xcarchive */,
+				4C464911275308BD00CEA077 /* UranNetworking.xcframework */,
 				249AFBD1BF9C119D06144405 /* Pods_UranGallery.framework */,
 			);
 			name = Frameworks;
@@ -192,7 +190,7 @@
 				4C1DD5B62750289600BBB86D /* Frameworks */,
 				4C1DD5B72750289600BBB86D /* Resources */,
 				FE73D6BBE6584F5836384BF6 /* [CP] Embed Pods Frameworks */,
-				4CB02B48275305700011BD36 /* Embed Frameworks */,
+				4C4649102753087E00CEA077 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
