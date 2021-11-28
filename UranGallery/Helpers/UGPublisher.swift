@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+/// Uran Gallery Publisher for emmiting values to listeners
 final class UGPublisher<T> {
   typealias Listener = (T) -> Void
   var listener: Listener?
@@ -23,6 +23,5 @@ final class UGPublisher<T> {
 
   func bind(listener: Listener?) {
     self.listener = listener
-    listener?(value)
   }
 }
