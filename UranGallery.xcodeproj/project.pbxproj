@@ -19,6 +19,7 @@
 		4CD10C882751585000C64D26 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD10C872751585000C64D26 /* GalleryViewModel.swift */; };
 		4CD10C8A27515B3B00C64D26 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD10C8927515B3B00C64D26 /* ImageCollectionViewCell.swift */; };
 		4CE9F18C438ABEAF626DDE12 /* Pods_UranGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249AFBD1BF9C119D06144405 /* Pods_UranGallery.framework */; };
+		4CEE471727530CE5001A27E9 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE471627530CE5001A27E9 /* UIViewController+Extensions.swift */; };
 		4CFAFFD12752F3820044472C /* UGPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAFFD02752F3820044472C /* UGPublisher.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		4C65E6A22751EEAF00A77983 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		4CD10C872751585000C64D26 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		4CD10C8927515B3B00C64D26 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		4CEE471627530CE5001A27E9 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		4CFAFFD02752F3820044472C /* UGPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGPublisher.swift; sourceTree = "<group>"; };
 		8F19E04BADBFA2A434E6F200 /* Pods-UranGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UranGallery.release.xcconfig"; path = "Target Support Files/Pods-UranGallery/Pods-UranGallery.release.xcconfig"; sourceTree = "<group>"; };
 		B2F1E317CE056291E414E83E /* Pods-UranGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UranGallery.debug.xcconfig"; path = "Target Support Files/Pods-UranGallery/Pods-UranGallery.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				4C65E6A22751EEAF00A77983 /* UIView+Extensions.swift */,
+				4CEE471627530CE5001A27E9 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				4CFAFFD12752F3820044472C /* UGPublisher.swift in Sources */,
 				4C1DD5C12750289600BBB86D /* GalleryViewController.swift in Sources */,
 				4CD10C8A27515B3B00C64D26 /* ImageCollectionViewCell.swift in Sources */,
+				4CEE471727530CE5001A27E9 /* UIViewController+Extensions.swift in Sources */,
 				4CD10C882751585000C64D26 /* GalleryViewModel.swift in Sources */,
 				4C1DD5BD2750289600BBB86D /* AppDelegate.swift in Sources */,
 				4C1DD5BF2750289600BBB86D /* SceneDelegate.swift in Sources */,

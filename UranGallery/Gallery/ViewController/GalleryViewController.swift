@@ -19,6 +19,7 @@ class GalleryViewController: UIViewController {
     @IBOutlet weak var trashbinButton: UIButton!
     @IBOutlet weak var galleryCollectionView: UICollectionView!
     
+    var searchController : UISearchController?
     var viewModel : GalleryViewModel!
     var searchMode = false {
         didSet {
@@ -65,6 +66,7 @@ class GalleryViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .always
         // Search Controller
         let search = UISearchController(searchResultsController: nil)
+        searchController = search
         search.searchResultsUpdater = self
         search.obscuresBackgroundDuringPresentation = false
         search.searchBar.placeholder = "Search Image"
@@ -76,6 +78,8 @@ class GalleryViewController: UIViewController {
         pagingView.isHidden = false
         trashbinButton.isHidden = true
         currentPage = 1
+        // Dismiss Keyboard
+        self.hideKeyboardWhenTappedAround()
     }
     
     private func bind() {
@@ -188,6 +192,7 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        searchController?.searchBar.resignFirstResponder()
         guard !searchMode else {
             isSelectionMode = true
             return
@@ -197,6 +202,7 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        dismissKeyboard()
         if collectionView.indexPathsForSelectedItems?.count == 0 {
             isSelectionMode = false
         }
@@ -213,5 +219,13 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
             width = (self.view.frame.width - 11) / 3
         }
         return CGSize(width: width, height: width)
+    }
+}
+
+extension GalleryViewController: UIScrollViewDelegate {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        dismissKeyboard()
+        guard let searchBar = searchController?.searchBar else {return}
+        searchBar.resignFirstResponder()
     }
 }
