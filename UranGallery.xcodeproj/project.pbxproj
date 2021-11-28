@@ -14,39 +14,22 @@
 		4C1DD5C62750289700BBB86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1DD5C52750289700BBB86D /* Assets.xcassets */; };
 		4C1DD5C92750289700BBB86D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1DD5C72750289700BBB86D /* LaunchScreen.storyboard */; };
 		4C65E6A32751EEAF00A77983 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65E6A22751EEAF00A77983 /* UIView+Extensions.swift */; };
+		4CB02B4A275306420011BD36 /* UranNetworking.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB02B49275306420011BD36 /* UranNetworking.xcframework */; };
+		4CB02B4B275306420011BD36 /* UranNetworking.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB02B49275306420011BD36 /* UranNetworking.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4CD10C882751585000C64D26 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD10C872751585000C64D26 /* GalleryViewModel.swift */; };
 		4CD10C8A27515B3B00C64D26 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD10C8927515B3B00C64D26 /* ImageCollectionViewCell.swift */; };
-		4CE6F73E275037E6006817C6 /* UranNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE6F73A275037CE006817C6 /* UranNetworking.framework */; };
-		4CE6F73F275037E6006817C6 /* UranNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE6F73A275037CE006817C6 /* UranNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4CE9F18C438ABEAF626DDE12 /* Pods_UranGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249AFBD1BF9C119D06144405 /* Pods_UranGallery.framework */; };
 		4CFAFFD12752F3820044472C /* UGPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAFFD02752F3820044472C /* UGPublisher.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4CE6F739275037CE006817C6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4CE6F734275037CE006817C6 /* UranNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CE6F6EB27503659006817C6;
-			remoteInfo = UranNetworking;
-		};
-		4CE6F73B275037CE006817C6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4CE6F734275037CE006817C6 /* UranNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CE6F6F527503659006817C6;
-			remoteInfo = UranNetworkingTests;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		4CE6F740275037E6006817C6 /* Embed Frameworks */ = {
+		4CB02B48275305700011BD36 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4CE6F73F275037E6006817C6 /* UranNetworking.framework in Embed Frameworks */,
+				4CB02B4B275306420011BD36 /* UranNetworking.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,9 +47,10 @@
 		4C1DD5C82750289700BBB86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C1DD5CA2750289700BBB86D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C65E6A22751EEAF00A77983 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		4CB02B452753055B0011BD36 /* UranNetworking.framework-iphoneos.xcarchive */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "UranNetworking.framework-iphoneos.xcarchive"; path = "../UranNetworking/build/UranNetworking.framework-iphoneos.xcarchive"; sourceTree = "<group>"; };
+		4CB02B49275306420011BD36 /* UranNetworking.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UranNetworking.xcframework; path = ../UranNetworking/build/UranNetworking.xcframework; sourceTree = "<group>"; };
 		4CD10C872751585000C64D26 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		4CD10C8927515B3B00C64D26 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
-		4CE6F734275037CE006817C6 /* UranNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UranNetworking.xcodeproj; path = ../UranNetworking/UranNetworking.xcodeproj; sourceTree = "<group>"; };
 		4CFAFFD02752F3820044472C /* UGPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UGPublisher.swift; sourceTree = "<group>"; };
 		8F19E04BADBFA2A434E6F200 /* Pods-UranGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UranGallery.release.xcconfig"; path = "Target Support Files/Pods-UranGallery/Pods-UranGallery.release.xcconfig"; sourceTree = "<group>"; };
 		B2F1E317CE056291E414E83E /* Pods-UranGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UranGallery.debug.xcconfig"; path = "Target Support Files/Pods-UranGallery/Pods-UranGallery.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,8 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CE6F73E275037E6006817C6 /* UranNetworking.framework in Frameworks */,
 				4CE9F18C438ABEAF626DDE12 /* Pods_UranGallery.framework in Frameworks */,
+				4CB02B4A275306420011BD36 /* UranNetworking.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				4C1DD5BB2750289600BBB86D /* UranGallery */,
-				4CE6F734275037CE006817C6 /* UranNetworking.xcodeproj */,
 				4C1DD5BA2750289600BBB86D /* Products */,
 				2BDE1094B6FCEE153EEE123E /* Pods */,
 				6D5DB87549B2A6EBB083E46B /* Frameworks */,
@@ -179,15 +162,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		4CE6F735275037CE006817C6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4CE6F73A275037CE006817C6 /* UranNetworking.framework */,
-				4CE6F73C275037CE006817C6 /* UranNetworkingTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		4CFAFFCD2752F36B0044472C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +173,8 @@
 		6D5DB87549B2A6EBB083E46B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4CB02B49275306420011BD36 /* UranNetworking.xcframework */,
+				4CB02B452753055B0011BD36 /* UranNetworking.framework-iphoneos.xcarchive */,
 				249AFBD1BF9C119D06144405 /* Pods_UranGallery.framework */,
 			);
 			name = Frameworks;
@@ -215,8 +191,8 @@
 				4C1DD5B52750289600BBB86D /* Sources */,
 				4C1DD5B62750289600BBB86D /* Frameworks */,
 				4C1DD5B72750289600BBB86D /* Resources */,
-				4CE6F740275037E6006817C6 /* Embed Frameworks */,
 				FE73D6BBE6584F5836384BF6 /* [CP] Embed Pods Frameworks */,
+				4CB02B48275305700011BD36 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,35 +229,12 @@
 			mainGroup = 4C1DD5B02750289600BBB86D;
 			productRefGroup = 4C1DD5BA2750289600BBB86D /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4CE6F735275037CE006817C6 /* Products */;
-					ProjectRef = 4CE6F734275037CE006817C6 /* UranNetworking.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				4C1DD5B82750289600BBB86D /* UranGallery */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		4CE6F73A275037CE006817C6 /* UranNetworking.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = UranNetworking.framework;
-			remoteRef = 4CE6F739275037CE006817C6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4CE6F73C275037CE006817C6 /* UranNetworkingTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = UranNetworkingTests.xctest;
-			remoteRef = 4CE6F73B275037CE006817C6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4C1DD5B72750289600BBB86D /* Resources */ = {
