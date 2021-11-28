@@ -1,0 +1,63 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UranNetworking
+import Combine
+import Foundation
+import Swift
+@_exported import UranNetworking
+import _Concurrency
+public enum ErrorType : Swift.Int {
+  case couldBeRejected
+  case toBeShown
+  case shouldTerminateApp
+  case other
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct UGError : Swift.Error {
+  public var errorCode: Swift.Int?
+  public var errorType: UranNetworking.ErrorType
+  public var errorMessage: Swift.String
+  public var endPoint: Swift.String?
+  public init(errorType: UranNetworking.ErrorType, errorMessage: Swift.String = "Unexpected Error", endpoint: Swift.String? = nil)
+}
+extension UranNetworking.UGError : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public struct UGImage : Swift.Codable {
+  public let urls: UranNetworking.ImageUrls
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ImageUrls : Swift.Codable {
+  public let raw: Swift.String, full: Swift.String, regular: Swift.String, small: Swift.String
+  public let thumb: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public let dataRepo: UranNetworking.DataRepoInterface
+public protocol DataRepoInterface {
+  func getImages(page: Swift.Int, countPerPage: Swift.Int, sortBy: UranNetworking.SortBy, completion: @escaping (Swift.Result<[UranNetworking.UGImage], UranNetworking.UGError>) -> Swift.Void)
+  func searchImages(page: Swift.Int, countPerPage: Swift.Int, query: Swift.String, completion: @escaping (Swift.Result<[UranNetworking.UGImage], UranNetworking.UGError>) -> Swift.Void)
+}
+public enum SortBy : Swift.String {
+  case latest
+  case oldest
+  case popular
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension UranNetworking.ErrorType : Swift.Equatable {}
+extension UranNetworking.ErrorType : Swift.Hashable {}
+extension UranNetworking.ErrorType : Swift.RawRepresentable {}
+extension UranNetworking.SortBy : Swift.Equatable {}
+extension UranNetworking.SortBy : Swift.Hashable {}
+extension UranNetworking.SortBy : Swift.RawRepresentable {}
